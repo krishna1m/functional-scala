@@ -8,7 +8,7 @@ extension [A](l: List[A])
         case (_, head :: tail) => loop(rem, tail, head +: acc)
       }
     }
-    loop(l, Nil, Nil)
+    loop(l, Nil, Nil).reverse
   }
 
 @main def m() =
