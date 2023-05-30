@@ -1,7 +1,9 @@
 @main def m() =
-  val f = (x: Int, y: Int) => x + y
-  val g = (x: Int) => (y: Int) => x + y
+  val f: (Int, Int) => Int = (x: Int, y: Int) => x + y
+  val g: Int => Int => Int = (x: Int) => (y: Int) => x + y
   println(f(2, 3))
+  println(g(2))
+  println(g(2)(3))
   println(curry(f)(2)(3))
   println(uncurry(g)(2, 3))
 
