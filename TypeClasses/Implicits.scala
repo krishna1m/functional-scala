@@ -4,6 +4,7 @@
   val jon = Person("Jon", 23)
   println(PersonSerializer.serialize(jon))
   println(JSONSerializable[Person].serialize(jon))
+  println(implicitly[JSONSerializable[Person]].serialize(jon))
 //  println(JSONSerializable.serialize(jon)) - does not work
 
 // implicit val/object is the same as a "given"
@@ -38,10 +39,3 @@ implicit object PersonSerializer extends JSONSerializable[Person]{
         |}""".stripMargin
 }
 
-// given ManSerializer with JSONSerializable[Person]{
-//   def serialize(person: Person): String =
-//     s"""|{
-//         | "name": "${person.name}"
-//         | "age": "${person.age}"
-//         |}""".stripMargin
-// }

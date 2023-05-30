@@ -6,7 +6,7 @@
 
 case class User(name: String, age: Int, email: String)
 
-// 1. Type class Instance and its companion object
+// 1. Type class and its companion object
 trait HTMLSerializable[T]:
   def serialize(value: T): String
 
