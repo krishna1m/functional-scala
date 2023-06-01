@@ -15,5 +15,8 @@ import scala.concurrent.ExecutionContext.Implicits.global
     futureInt.map(_ * 2)
   }
 
+  // Future.sequence(...) === Future.traverse(...)(identity)
+
   println(futureOfList.value)
   println(transformed.value)
+
