@@ -1,1 +1,1 @@
-* My functional programming explorations with Scala ✈🌎
+** My functional programming explorations with Scala ✈🌎
