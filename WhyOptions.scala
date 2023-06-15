@@ -6,8 +6,8 @@
   println(anotherList.headOption) // None
 
   val double: Int => Int = x => x * 2
-  val doubled = l.map(double)
-  println(doubled) // List(2, 4, 6)
+  val listDoubled = l.map(double)
+  println(listDoubled) // List(2, 4, 6)
 
   val doubledEmpty = anotherList.map(double)
   println(doubledEmpty) // None
